@@ -1,0 +1,62 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.tree-container {
+  margin: 20px;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tree-node.root {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for connecting lines */
+.tree-node::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 10px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.tree-node.root::before {
+  top: 0;
+}
+
+/* Style for child node spacing */
+.children.root-children {
+  margin-top: 20px;
+}
